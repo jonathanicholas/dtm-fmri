@@ -3,6 +3,12 @@ from gensim import corpora, models
 import numpy as np
 import pandas as pd
 
+class Output:
+    def __init__(self, ids, labels, gammas):
+        self.ids = ids
+        self.labels = labels
+        self.gammas = gammas
+
 def docGrabber(subjects, delimiter):
     '''
     Loads txt correlation matrix for each subject
@@ -46,7 +52,7 @@ def runDTM(args):
     '''
 
     num_samples = args['num_samples']
-    path = '../texts/%s/'%(args['parent_dir'])
+    path = 'texts/%s/'%(args['parent_dir'])
     subjects, full_data = loadFiles(path)
 
     window_list = []
@@ -375,3 +381,18 @@ def merge_gammas(gammas_clean,topic_labels,args):
                 group_gammas[l,t] = 0
 
     return group_gammas
+
+def merged_order(group_result):
+    '''
+        Returns ordered list of topics in the order they were merged in
+        Useful for plotting and re-ordering
+    '''
+    labels = np.unique(group_result.labels)
+    mat_order = []
+    for l in labels:
+        grp_ts = []
+        for t in range(len(group_result.labels)):
+            if group_result.labels[t] == l:
+                grp_ts.append(group_result.ids[t])
+        mat_order.append(grp_ts)
+    return mat_order

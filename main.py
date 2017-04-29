@@ -23,15 +23,29 @@ from utilities import *
 def main():
 
     # set arguments
+
+    # opto arguments
+    # args = {'num_topics': 20, # number of topics to estimate
+    #         'num_samples': 480, # length of timeseries
+    #         'num_subjects': 3, # number of subjects
+    #         'parent_dir': 'opto', # data directory
+    #         'run_model': False, # False assumes model has been previously run
+    #         'run_pmi': False, # False assumes clustering has already been run once
+    #         'stim_design': 'topics/opto_k20/stim_design.txt', # Location of stimulus design file
+    #         'cluster_iters': 1000 # number of iterations for clustering (takes max mean gap stat)
+    #         }
+
+    # nengo arguments
     args = {'num_topics': 20, # number of topics to estimate
-            'num_samples': 480, # length of timeseries
-            'num_subjects': 3, # number of subjects
-            'parent_dir': 'opto', # data directory
-            'run_model': False, # False assumes model has been previously run
-            'run_pmi': False, # False assumes clustering has already been run once
-            'stim_design': 'topics/opto_k20/stim_design.txt', # Location of stimulus design file
+            'num_samples': 1714, # length of timeseries
+            'num_subjects': 10, # number of subjects
+            'parent_dir': 'nengo', # data directory
+            'run_model': True, # False assumes model has been previously run
+            'run_pmi': True, # False assumes clustering has already been run once
+            'stim_design': 'topics/nengo_k20/stim_design.txt', # Location of stimulus design file
             'cluster_iters': 1000 # number of iterations for clustering (takes max mean gap stat)
             }
+
 
     # run model
     if args['run_model']:
