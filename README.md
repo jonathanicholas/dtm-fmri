@@ -3,7 +3,7 @@
  
 ## Data
 #### Texts
-Functional connectivity at each time point was converted via Symbolic Aggregate Approximation (SAX) and saved in documents in the DTM/texts directory for each dataset. This is input data for the dynamic topic model. Raw timeseries for HCP data are in this repository, but non-public timeseries are located in the copy on sherlock:
+Functional connectivity at each time point was converted via Symbolic Aggregate Approximation (SAX) and saved in documents in the DTM/texts directory for each dataset. This is input data for the dynamic topic model. Raw timeseries for HCP data are in this repository, but if you are part of SCSNL, the non-public timeseries are located in the copy on sherlock:
 
     $OAK/projects/jnichola/dtm-fmri
 
