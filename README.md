@@ -3,7 +3,7 @@
  
 ## Data
 #### Texts
-Functional connectivity at each time point was converted via Symbolic Aggregate Approximation (SAX) and saved in documents in the DTM/texts directory for each dataset. This is input data for the dynamic topic model. Raw timeseries are not in this repository.
+Functional connectivity at each time point was converted via Symbolic Aggregate Approximation (SAX) and saved in documents in the DTM/texts directory for each dataset. This is input data for the dynamic topic model. Raw timeseries for HCP data are in this repository, but non-public timeseries are located in the copy on sherlock $OAK/projects/jnichola/dtm-fmri.
 
 ## Code
 #### DTM/main.py
@@ -12,6 +12,8 @@ Runs a dynamic topic model for either the optogenetic, working memory, or math l
 Holds a number of functions used by main.py to load input data, run models, cluster, and save output
 #### DTM/analysis.py
 Contains all plotting functions. The main function contains variables that can be changed depending upon which dataset is being plotted and what plots you would like to run.
+#### SAX/runSAX.m
+This is the primary script to run symbolic aggregate approximation (SAX) on an input timeseries of shape nSubjects x nRois x Time. Wrappers for sherlock job submission are included here as well.
 
 ## Results
 #### Models
