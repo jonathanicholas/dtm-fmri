@@ -1,5 +1,3 @@
-# dtm-fmri
-
 ## Uncovering time-varying latent brain states with dynamic topic modeling
 ###### Jonathan Nicholas, Kaustubh Supekar, Weidong Cai, Vinod Menon
  
