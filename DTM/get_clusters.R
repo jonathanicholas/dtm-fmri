@@ -1,0 +1,5 @@
+library(NbClust)
+data<-read.table('gammas_out/opto_gammas.txt')
+#data<-read.table('gammas_out/WM_LR_gammas.txt')
+#data<-read.table('gammas_out/WM_RL_gammas.txt')
+NbClust(data=t(data),method="kmeans")
