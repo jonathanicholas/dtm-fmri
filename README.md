@@ -14,8 +14,15 @@ Runs a dynamic topic model for either the optogenetic, working memory, or math l
 Holds a number of functions used by main.py to load input data, run models, cluster, and save output
 #### DTM/analysis.py
 Contains all plotting functions. The main function contains variables that can be changed depending upon which dataset is being plotted and what plots you would like to run.
+#### DTM/create_fit_summaries.py
+Creates files that summarize the fits and extract the most important parts to be used in the paper. Then moves these to the for_paper directory.
 #### SAX/runSAX.m
 This is the primary script to run symbolic aggregate approximation (SAX) on an input timeseries of shape nSubjects x nRois x Time. Wrappers for sherlock job submission are included here as well.
+
+## Paper
+Everything needed to create figures and run stats on the fit models is in the 'for_paper' directory.
+#### for_paper/dtm_figures.ipynb
+This python notebook creates every panel that goes into all figures in the paper
 
 ## Results
 #### Models
